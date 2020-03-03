@@ -52,3 +52,22 @@ notesRouter
       })
       .catch(next);
   });
+
+notesRouter
+  .route('/:note_id')
+  .all((req, res, next) => {
+    NotesService.getById(
+      req.app.get('db'),
+      req.params.note_id
+    )
+      .then(note => {
+        if (!note) {
+          return res.status(400).json({
+            error: { message: `Note doesn't exist` } 
+          });
+        }
+        res.note = note;
+        next();
+      })
+      .catch(next);
+  })
