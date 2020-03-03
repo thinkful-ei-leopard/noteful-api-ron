@@ -3,6 +3,8 @@
 This is the API server for the Noteful application.
 Detailed in: https://courses.thinkful.com/ei-node-postgres-v1/checkpoint/19
 
+Author: Ron Martin
+
 
 ## Scripts
 
