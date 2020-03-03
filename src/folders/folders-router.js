@@ -73,7 +73,7 @@ foldersRouter
       req.app.get('db'),
       req.params.folder_id
     )
-      .then(numRowsAffected => {
+      .then(numRowsAffected => { // eslint-disable-line no-unused-vars
         res.status(204).end();
       })
       .catch(next);
@@ -95,7 +95,7 @@ foldersRouter
       req.params.folder_id,
       folderToUpdate
     )
-      .then(numRowsAffected => {
+      .then(numRowsAffected => { // eslint-disable-line no-unused-vars
         res.status(204).end();
       })
       .catch(next);
