@@ -33,7 +33,7 @@ foldersRouter
       }
     }
 
-    FoldersService.insertUser(
+    FoldersService.insertFolder(
       req.app.get('db'),
       newFolder
     )
